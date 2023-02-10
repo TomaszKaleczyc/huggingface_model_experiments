@@ -18,6 +18,7 @@ create-env:
 	$(PYTHON_VERSION) -m virtualenv --system-site-packages -p $(PYTHON_VERSION) $(VENV_PATH)
 	. $(VENV_ACTIVATE_PATH) && \
 	$(PYTHON_VERSION) -m pip install pip --upgrade && \
+	$(PYTHON_VERSION) -m pip install --upgrade six && \
 	$(PYTHON_VERSION) -m pip install -r $(REQUIREMENTS_PATH)
 
 activate-env-command:
